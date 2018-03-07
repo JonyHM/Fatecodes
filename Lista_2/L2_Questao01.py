@@ -1,4 +1,4 @@
-print("Lista 2 - Questão 1")
+print("Lista 2 - Questão 1", "\n")
 
 print("Insira três lados de um trângulo")
 a = int(input("1: "))
