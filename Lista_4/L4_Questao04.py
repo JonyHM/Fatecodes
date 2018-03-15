@@ -19,13 +19,13 @@ count = 0
 # Repeticao enquanto o contador 'count' estiver dentro do comprimento da lista de palavras
 for count in range (len(vetor)):
 
-	# Lista com cada palavra do vetor de palavras
+	# Variavel com cada palavra do vetor de palavras
 	pt = vetor[count]
 
-	# Se a palavra da lista 'pt' (que muda a cada repeticao) comecar ou terminar com 'python', ela deve ser inserida na lista 'python'
+	# Se a palavra da variavel 'pt' (que muda a cada repeticao) comecar ou terminar com 'python', ela deve ser inserida na lista 'python'
 	if pt[0] in "python":
 		python.append(pt)
 	if pt[-1] in "python":
 		python.append(pt)	
 
-print("Lista de palavras: ", vetor, "\n \nLista com palavras que tem as mesmas letras de 'python': ",python, "\n")
+print("Lista de palavras:	 ", vetor, "\n \nLista 'python':	 ",python, "\n")
