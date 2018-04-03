@@ -1,91 +1,117 @@
 #!/usr/bin/python -tt
-# Exercícios by Nick Parlante (CodingBat)
+# Exercicios by Nick Parlante (CodingBat)
 
 # A. dormir
-# dia_semana é True para dias na semana
-# feriado é True nos feriados
-# você pode ficar dormindo quando é feriado ou não é dia semana
-# retorne True ou False conforme você vá dormir ou não
+# dia_semana e True para dias na semana
+# feriado e True nos feriados
+# voce pode ficar dormindo quando e feriado ou nao e dia semana
+# retorne True ou False conforme voce va dormir ou nao
 def dormir(dia_semana, feriado):
-  if dia_semana and not feriado:
-    return False
-  else:
-    return True
+	if dia_semana and not feriado:
+		return False
+	else:
+		return True
     
 # B. alunos_problema
 # temos dois alunos a e b
 # a_sorri e b_sorri indicam se a e b sorriem
-# temos problemas quando ambos estão sorrindo ou ambos não estão sorrindo
+# temos problemas quando ambos estao sorrindo ou ambos nao estao sorrindo
 # retorne True quando houver problemas
 def alunos_problema(a_sorri, b_sorri):
-  return 
+	if a_sorri and b_sorri or not a_sorri and not b_sorri:
+		return True
+	else:
+		return False
 
 # C. soma_dobro
-# dados dois números inteiros retorna sua soma
-# porém se os números forem iguais retorna o dobro da soma
+# dados dois numeros inteiros retorna sua soma
+# porem se os numeros forem iguais retorna o dobro da soma
 # soma_dobro(1, 2) -> 3
 # soma_dobro(2, 2) -> 8
 def soma_dobro(a, b):
-  return
+	if a == b:
+		soma = (a + b) * 2
+	else:
+		soma = a + b
+	return soma
 
 # D. diff21
-# dado um inteiro n retorna a diferença absoluta entre n e 21
-# porém se o número for maior que 21 retorna dobro da diferença absoluta
+# dado um inteiro n retorna a diferenca absoluta entre n e 21
+# porem se o numero for maior que 21 retorna dobro da diferenca absoluta
 # diff21(19) -> 2
 # diff21(25) -> 8
 # dica: abs(x) retorna o valor absoluto de x
 def diff21(n):
-  return
+	if n > 21:
+		r = abs (n - 21) * 2
+	else:
+		r = abs (21 - n)
+	return r
 
 # E. papagaio
 # temos um papagaio que fala alto
-# hora é um parâmetro entre 0 e 23
+# hora e um parametro entre 0 e 23
 # temos problemas se o papagaio estiver falando
 # antes da 7 ou depois das 20
 def papagaio(falando, hora):
-  return
+	if falando and hora < 7 or falando and hora > 20:
+		r = True
+	else:
+		r = False
+	return r
 
 # F. dez
 # dados dois inteiros a e b
-# retorna True se um dos dois é 10 ou a soma é 10
+# retorna True se um dos dois e 10 ou a soma e 10
 def dez(a, b):
-  return
+	if (a+b) == 10 or a == 10 or b == 10:
+		return True
+	else:
+		return False
 
 # G. dista10
 # seja um inteiro n
-# retorna True se a diferença absoluta entre n e 100 ou n e 200
+# retorna True se a diferenca absoluta entre n e 100 ou n e 200
 # for menor ou igual a 10
 # dista10(93) -> True
 # dista10(90) -> True
 # dista10(89) -> False
 def dista10(n):
-  return
+	if abs(100 - n) <= 10 or abs(200 - n) <= 10:
+		return True
+	else:
+		return False
 
 # H. apaga
 # seja uma string s e um inteiro n
-# retorna uma nova string sem a posição n
+# retorna uma nova string sem a posicao n
 # apaga('kitten', 1) -> 'ktten'
 # apaga('kitten', 4) -> 'kittn'
 def apaga(s, n):
-  return 
+	s = s.replace(s[n], '')
+	return s
 
 # I. troca
 # seja uma string s
 # se s tiver tamanho <= 1 retorna ela mesma
-# caso contrário troca a primeira e última letra
+# caso contrario troca a primeira e ultima letra
 # troca('code') -> 'eodc'
 # troca('a') -> 'a'
 # troca('ab') -> 'ba'
 def troca(s):
-  return 
+	if len(s) <= 1:
+		return s
+	else:
+		s = s[-1] + s[1:-1] + s[0]
+		return s
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
 def test(obtido, esperado):
   if obtido == esperado:
-    prefixo = ' Parabéns!'
+    prefixo = ' Parabens!'
   else:
-    prefixo = ' Ainda não'
+    prefixo = ' Ainda nao'
   print ('%s obtido: %s esperado: %s'
          % (prefixo, repr(obtido), repr(esperado)))
 
