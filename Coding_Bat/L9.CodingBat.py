@@ -2,12 +2,12 @@
 # Exercicios by Nick Parlante (CodingBat)
 
 # A. first_last6
-# verifica se 6 a o primeiro ou ultimo elemento da lista nums
+# verifica se 6 e o primeiro ou ultimo elemento da lista nums
 # first_last6([1, 2, 6]) -> True
 # first_last6([6, 1, 2, 3]) -> True
 # first_last6([3, 2, 1]) -> False
 def first_last6(nums):
-  return
+  return 6 == nums[0] or 6 == nums[-1]
 
 # B. same_first_last
 # retorna True se a lista nums possui pelo menos um elemento
@@ -16,7 +16,13 @@ def first_last6(nums):
 # same_first_last([1, 2, 3, 1]) -> True
 # same_first_last([1, 2, 1]) -> True
 def same_first_last(nums):
-  return 
+  if len(nums) >= 1:
+    if nums[0] == nums[-1]:
+      return True
+    else:
+      return False
+  else:
+    return False
 
 # C. common_end
 # Dada duas listas a e b verifica se os dois primeiros sao
@@ -26,7 +32,7 @@ def same_first_last(nums):
 # common_end([1, 2, 3], [7, 3, 2]) -> False
 # common_end([1, 2, 3], [1, 3]) -> True
 def common_end(a, b):
-  return 
+  return a[0] == b[0] or a[-1] == b[-1]
 
 # D. maior_ponta
 # Dada uma lista nao vazia, cria uma nova lista onde todos
@@ -35,14 +41,24 @@ def common_end(a, b):
 # maior_ponta([1, 2, 3]) -> [3, 3, 3]
 # maior_ponta([1, 3, 2]) -> [2, 2, 2]
 def maior_ponta(nums):
-  return
+  lista = []
+  count = 0
+  while count < 3:
+    lista.append(max(nums[0], nums[-1]))
+    count += 1
+  return lista
 
 # E. sum2
 # Dada uma lista de inteiros de qualquer tamanho
 # retorna a soma dos dois primeiros elementos
 # se a lista tiver menos de dois elementos, soma o que for possivel
 def sum2(nums):
-  return 
+  if len(nums) > 1:
+    return nums[0] + nums[1]
+  elif len(nums) == 1:
+    return nums[0]
+  else:
+    return 0
 
 # F. middle_way
 # sejam duas listas de inteiros a e b
@@ -52,7 +68,8 @@ def sum2(nums):
 # middle_way([7, 7, 7], [3, 8, 0]) -> [7, 8]
 # middle_way([5, 2, 9], [1, 4, 5]) -> [2, 4]
 def middle_way(a, b):
-  return 
+  lista = [a[1], b[1]]
+  return lista
 
 # G. date_fashion
 # voce e sua namorada(o) vao a um restaurante
@@ -69,7 +86,12 @@ def middle_way(a, b):
 # date_fashion(5, 2) -> 0
 # date_fashion(5, 5) -> 1
 def date_fashion(eu, par):
-  return
+  if eu <= 2 or par <= 2:
+    return 0
+  elif eu >= 8 or par >= 8:
+    return 2
+  else: 
+    return 1
 
 # H. squirrel_play
 # os esquilos na FATEC brincam quando a temperatura esta entre 60 e 90
@@ -80,7 +102,12 @@ def date_fashion(eu, par):
 # squirrel_play(95, False) -> False
 # squirrel_play(95, True) -> True
 def squirrel_play(temp, is_summer):
-  return
+  if temp >= 60 and temp <=100 and is_summer:
+    return True
+  elif temp >= 60 and temp <= 90:
+    return True
+  else:
+    return False
 
 # I. pego_correndo
 # você foi pego correndo
@@ -96,7 +123,16 @@ def squirrel_play(temp, is_summer):
 # pego_correndo(65, False) -> 1
 # pego_correndo(65, True) -> 0 
 def pego_correndo(speed, is_birthday):
-  return
+  if is_birthday:
+    speed = speed - 5
+    
+  if speed <= 60:
+    multa = 0
+  elif speed <= 80:
+    multa = 1
+  else: 
+    multa = 2
+  return multa
 
 # J. alarm_clock
 # day: 0=domingo, 1=segunda, 2=terça, ..., 6=sábado
@@ -111,7 +147,17 @@ def pego_correndo(speed, is_birthday):
 # alarm_clock(5, False) -> '7:00'
 # alarm_clock(0, False) -> '10:00'
 def alarm_clock(day, vacation):
-  return
+  if vacation:
+    if day > 0 and day < 6:
+      desp = '10:00'
+    else: 
+      desp = 'off'
+  else:
+    if day > 0 and day < 6:
+      desp = '7:00'
+    else: 
+      desp = '10:00'
+  return desp
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.

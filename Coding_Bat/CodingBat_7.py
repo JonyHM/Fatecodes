@@ -18,6 +18,14 @@ def string_splosion(s):
         xpl += s[:i]
     return xpl
 
+#count = 1
+#xpl = ''
+#while count <= len(s):
+  #xpl = xpl + s[:count]
+  #count += 1
+  #return xpl
+  
+
 # C. array_count9
 # conta quantas vezes aparece o 9 numa lista nums
 def array_count9(nums):
@@ -34,7 +42,7 @@ def array_count9(nums):
 # array_front9([1, 2, 3, 4, 9]) -> False
 # array_front9([1, 2, 3, 4, 5]) -> False
 def array_front9(nums):
-  return 9 in nums[:5]
+  return 9 in nums[:4]
 
 # E. hello_name
 # seja uma string name
