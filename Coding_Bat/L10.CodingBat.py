@@ -8,7 +8,11 @@
 # near_ten(17) -> False
 # near_ten(19) -> True
 def near_ten(n):
-  return 
+
+	if n % 10 <= 2 or n % 10 >= 8:
+		return True
+	else:
+		return False
 
 # B. lone_sum
 # Soma maluca: some os numeros inteiros a, b, e c
@@ -17,7 +21,17 @@ def near_ten(n):
 # lone_sum(3, 2, 3) -> 2
 # lone_sum(3, 3, 3) -> 0
 def lone_sum(a, b, c):
-  return 
+	if a == b == c:
+		soma = 0
+	elif a == b:
+		soma = c
+	elif a == c:
+		soma = b
+	elif b == c:
+		soma = a
+	else:
+		soma = a+b+c
+	return soma
 
 # C. luck_sum
 # Soma tres inteiros a, b, c
@@ -26,6 +40,7 @@ def lone_sum(a, b, c):
 # lucky_sum(1, 2, 13) -> 3
 # lucky_sum(1, 13, 3) -> 1
 def lucky_sum(a, b, c):
+	
   return 
 
 # D. double_char
