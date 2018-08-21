@@ -1,1 +1,1 @@
-Every single code created during the course
+Python codes created during the course.
