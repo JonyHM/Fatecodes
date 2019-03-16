@@ -1,5 +1,6 @@
 # Pesquisas relacionadas
 
+
 ## Bibliotecas e Ajudas utilizadas:
 
 [Biblioteca Time](https://docs.python.org/3/library/time.html)
@@ -8,9 +9,11 @@
 
 [Formatação p2](https://pt.stackoverflow.com/questions/262184/o-que-utilizar-para-formatar-uma-string-ou-format)
 
+
 ## Links para o MergeSort:
 
 [1](https://wiki.python.org.br/MergeSort) - [2](http://interactivepython.org/courselib/static/pythonds/SortSearch/TheMergeSort.html) - [3](https://www.geeksforgeeks.org/merge-sort/)
+
 
 ### Formatação de arquivos .md (Este README)
 
