@@ -5,36 +5,36 @@ vetorIndice = 2000
 tempoTotal = 0
 
 # Códigos retirados das explicações das aulas destas estruturas
-def selecao(v):
-  resp = []
-  while v:
-    m = min(v)
-    resp.append(m)
-    v.remove(m)
-  return resp
+def selecao(lista):
+  ordenada = []
+  while lista:
+    minimo = min(lista)
+    ordenada.append(minimo)
+    lista.remove(minimo)
+  return ordenada
 
-def merge(e, d):
-    r = []
+def merge(esq, dire):
+    orden = []
     i, j = 0, 0
-    while i < len(e) and j < len(d):
-        if e[i] <= d[j]:
-            r.append(e[i])
+    while i < len(esq) and j < len(dire):
+        if esq[i] <= dire[j]:
+            orden.append(esq[i])
             i += 1
         else:
-            r.append(d[j])
+            orden.append(dire[j])
             j += 1
-    r += e[i:]
-    r += d[j:]
-    return r
+    orden += esq[i:]
+    orden += dire[j:]
+    return orden
 
-def mergesort(v):
-    if len(v) <= 1:
-        return v
+def mergesort(lista):
+    if len(lista) <= 1:
+        return lista
     else:
-        m = len(v) // 2
-        e = mergesort(v[:m])
-        d = mergesort(v[m:])
-        return merge(e, d)
+        meio = len(lista) // 2
+        esq = mergesort(lista[:meio])
+        dire = mergesort(lista[meio:])
+        return merge(esq, dire)
 
 def quicksort(lista):
     if len(lista) <= 1: 
